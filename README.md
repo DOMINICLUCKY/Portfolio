@@ -1,4 +1,4 @@
-# Arjun Boda - 3D Interactive Portfolio
+# Adarsh Mund - 3D Interactive Portfolio
 
 A production-ready 3D portfolio website built with Next.js, Framer Motion, and React Three Fiber. Features immersive animations, floating project cards, and a sleek sidebar navigation.
 
