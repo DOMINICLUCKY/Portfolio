@@ -52,7 +52,7 @@ Change your name in the hero section:
 
 ```typescript
 <h1 className="text-6xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-cyan-300 to-green-400 mb-4 drop-shadow-lg">
-  Arjun Boda  {/* Replace with your name */}
+  Adarsh Mund  {/* Replace with your name */}
 </h1>
 <p className="text-xl md:text-2xl text-cyan-300 font-light tracking-widest">
   Full-Stack Developer  {/* Update your title */}

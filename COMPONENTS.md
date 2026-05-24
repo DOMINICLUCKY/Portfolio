@@ -21,7 +21,7 @@ Complete guide to all components in the portfolio.
 **Customizable Parts**:
 ```typescript
 // Hero Title (Line ~62)
-<h1>Arjun Boda</h1>
+<h1>Adarsh Mund</h1>
 
 // Hero Subtitle
 <p>Full-Stack Developer</p>

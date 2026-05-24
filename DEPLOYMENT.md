@@ -166,7 +166,7 @@ docker run -p 3000:3000 portfolio
 
 1. Go to Vercel Dashboard → Your Project
 2. Settings → Domains
-3. Add your domain (e.g., arjunboda.com)
+3. Add your domain (e.g., adarshmund.com)
 4. Vercel shows DNS records
 5. Update DNS at your domain registrar
 
