@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ededed;
+  font-size: 16px;
+}
+
+@media (max-width: 640px) {
+  :root {
+    font-size: 14px;
+  }
 }
 
 @theme inline {
@@ -12,15 +19,140 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Custom animations */
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.8);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.glow-text {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.slide-in-up {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.slide-in-down {
+  animation: slideInDown 0.6s ease-out;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 136, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 136, 0.6);
+}
+
+/* Hide Next.js dev indicators */
+[data-testid="dev-indicator"],
+[data-testid="next-dev-indicator"],
+.__next-dev-indicator {
+  display: none !important;
+}
+
+/* Hide build activity indicator */
+.__next-build-watcher {
+  display: none !important;
+}
+
+/* Hide route change indicator */
+.__next-router-indicator {
+  display: none !important;
+}
+
+/* Aggressive selectors for Next.js UI elements */
+div[style*="position: fixed"][style*="bottom"][style*="left"],
+div[style*="bottom: 16px"][style*="left: 16px"],
+svg[style*="position: fixed"],
+[class*="dev-overlay"],
+[id*="dev"],
+[class*="__dev"],
+.next-error-boundary {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  z-index: -9999 !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Hide any small circular indicators at bottom-left */
+div[style*="16px"][style*="rgba"] {
+  display: none !important;
+}
+
+/* Nuclear option - hide any element in bottom-left corner */
+body > div[style*="bottom: 16px"],
+body > div[style*="left: 16px"] {
+  display: none !important;
 }
