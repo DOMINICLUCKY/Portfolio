@@ -38,7 +38,7 @@ export const CTASection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: false }}
-              className="text-xl sm:text-2xl text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto"
+              className="text-xl sm:text-2xl text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto text-center md:whitespace-nowrap"
             >
               Let's collaborate on your next project and bring your vision to life
             </motion.p>
